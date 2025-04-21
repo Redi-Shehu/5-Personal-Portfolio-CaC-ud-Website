@@ -1,0 +1,82 @@
+/* font-family: "Jost", sans-serif; */
+/* font-weight: 100 - 900 */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 400;
+}
+:root {
+  --primary-color: #e41c6f;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Jost", sans-serif;
+}
+img {
+  object-fit: cover;
+}
+/* ------------------------------------ */
+/* --------------Section 1---------------- */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(./images/bg.jpg) center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.section-1__heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  border-bottom: 0.3rem solid #fff;
+  text-shadow: 0.2rem 0.2rem 1rem #555;
+  transform: skew(-10deg);
+}
+.section-1__person-img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+
+  border: 0.7rem dotted var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  opacity: 0.8;
+}
+.section-1__person-name {
+  font-size: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.5rem 3rem;
+  letter-spacing: 0.3rem;
+  transform: skew(-10deg);
+}
+.section-1__btn {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #fff;
+  border: 0.3rem solid #333;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
