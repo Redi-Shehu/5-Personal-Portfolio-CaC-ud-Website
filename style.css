@@ -17,6 +17,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Jost", sans-serif;
@@ -65,6 +66,11 @@ textarea {
   height: 4rem;
   background-color: var(--primary-color);
   box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  z-index: 50;
+}
+.sticky {
+  position: fixed;
+  top: 0;
 }
 .navbar__link {
   font-size: 1.7rem;
@@ -153,7 +159,8 @@ textarea {
 /* --------------Section 2 About Me---------------- */
 .section-2 {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: auto;
   padding: 15rem 0 10rem 0;
   display: flex;
   flex-direction: column;
@@ -188,11 +195,28 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  width: 90%;
   height: 100%;
   border-radius: 0.3rem;
   z-index: 0;
   background-color: var(--primary-color);
+}
+.progress-bar:nth-child(1) .progress-percent {
+  width: 97%;
+}
+.progress-bar:nth-child(2) .progress-percent {
+  width: 89%;
+}
+.progress-bar:nth-child(3) .progress-percent {
+  width: 85%;
+}
+.progress-bar:nth-child(4) .progress-percent {
+  width: 81%;
+}
+.progress-bar:nth-child(5) .progress-percent {
+  width: 80%;
+}
+.progress-bar:nth-child(6) .progress-percent {
+  width: 81%;
 }
 .section-2__services {
   width: 100%;
@@ -298,7 +322,7 @@ textarea {
 .project:hover .project__link {
   bottom: 5rem;
 }
-/* --------------Section 4 Form---------------- */
+/* --------------Section 4 Contact---------------- */
 .section-4 {
   width: 100%;
   height: 80vh;
@@ -370,4 +394,75 @@ textarea {
   letter-spacing: 0.2rem;
   font-weight: 300;
   text-align: center;
+}
+
+/* RESPONSIVE MEDIA QUERIES ----------------*/
+@media (max-width: 1200px) {
+  .section-2__services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .service {
+    margin: 2rem;
+  }
+  .section-4 {
+    height: 60vh;
+  }
+}
+@media (max-width: 800px) {
+  .section-1__heading {
+    font-size: 4rem;
+  }
+  .progress-bar {
+    width: 50rem;
+  }
+}
+@media (max-width: 600px) {
+  .section-1__heading {
+    font-size: 3rem;
+  }
+  .navbar__link {
+    font-size: 1.5rem;
+    margin: 0 2rem;
+  }
+  .section-2 {
+    padding: 10rem;
+  }
+  .section-heading {
+    margin-bottom: 10rem;
+  }
+  .progress-bar {
+    width: 45rem;
+  }
+  .project__img {
+    width: 100%;
+  }
+  .contact__form {
+    width: 40rem;
+  }
+  .copyright {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 45%;
+  }
+  .section-1__heading {
+    font-size: 2.5rem;
+  }
+  .navbar__link {
+    margin: 0 1.5rem;
+  }
+  .section-heading {
+    text-align: center;
+  }
+  .progress-bar {
+    width: 40rem;
+  }
 }
